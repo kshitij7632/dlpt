@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshya Private Tuitions - Excellence in Education</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .nav-logo h2 {
+            color: #4a90e2;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-logo span {
+            color: #666;
+            font-size: 0.9rem;
+            display: block;
+            margin-top: -5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #4a90e2;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+            color: white;
+            padding: 120px 0 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .highlight {
+            color: #ffd700;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #ffd700;
+            color: #333;
+        }
+
+        .btn-primary:hover {
+            background: #ffed4a;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #4a90e2;
+        }
+
+        .hero-graphic {
+            text-align: center;
+            font-size: 12rem;
+            color: rgba(255,255,255,0.1);
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat h4 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4a90e2;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat p {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .about-graphic {
+            text-align: center;
+            font-size: 8rem;
+            color: #4a90e2;
+            opacity: 0.1;
+        }
+
+           /* Founder Section */
+    .owner-section {
+      background: #f9f9f9; padding: 60px 20px; text-align: center;
+    }
+    .owner-section img {
+      width: auto; border-radius: 20%; margin-bottom: 15px; height: 400px; 
+    }
+    .owner-section h2 {color: #4a90e2;}
+    .owner-section p {max-width: 700px; margin: auto; color: #555;}
+
+
+        /* Courses Section */
+        .courses {
+            padding: 80px 0;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .course-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+        }
+        .course-icon {
+            font-size: 3rem;
+            color: #4a90e2;
+            margin-bottom: 1rem;
+        }
+
+        .course-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .course-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .course-card ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .course-card ul li {
+            padding: 0.5rem 0;
+            color: #666;
+            border-bottom: 1px solid #eee;
+        }
+
+        .course-card ul li:before {
+            content: "✓";
+            color: #4a90e2;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #4a90e2;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* ================== TESTIMONIALS SECTION STYLES ================== */
+
+/* Overall background and spacing for the testimonials area */
+.testimonials-section {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+/* Container for testimonial cards in a responsive grid layout */
+.testimonials-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 40px;
+}
+
+/* Each testimonial card */
+.testimonial-card {
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1); /* Soft shadow effect */
+  border-radius: 12px;
+  padding: 24px 18px 18px 18px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+/* Zoom effect on hover for better interactivity */
+.testimonial-card:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* Avatar (profile) image styling: circular, sized, with accent border */
+.testimonial-avatar {
+  width: 200px;
+  height: 220px;
+  border-radius: 15%;
+  object-fit: cover;
+  margin-bottom: 14px;
+  border: 3px solid #4a90e2; /* Accent color border */
+  background: #e3edfb;
+}
+
+/* Style for the person's role (student/parent/class) */
+.testimonial-role {
+  color: #4a90e2;
+  font-size: 0.96rem;
+  margin-bottom: 0.8em;
+}
+
+/* Set the testimonial text color and spacing */
+.testimonial-card p {
+  color: #555;
+  font-size: 1.07rem;
+}
+
+/* ================== END TESTIMONIALS SECTION STYLES ================== */
+
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #4a90e2;
+            margin-right: 1rem;
+            width: 50px;
+            height: 50px;
+            background: #f0f7ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-details h4 {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details p {
+            color: #666;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4a90e2;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3,
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #4a90e2;
+        }
+
+        .footer-section p {
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: #4a90e2;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #ccc;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #4a90e2;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                flex-direction: column;
+                background-color: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 2rem 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div> <img src="logo.png" alt="Lakshya Private Tuitions Logo" style="height:95px;">
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#courses" class="nav-link">Courses</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Achieve Your <span class="highlight">Academic Goals</span></h1>
+                <p>Professional private tuitions for students of all levels. Personalized learning approach with experienced tutors.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Enroll Now</button>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-graphic">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Lakshya Private Tuitions</h2>
+                <p>Empowering students to reach their full potential through quality education</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>At Lakshya Private Tuitions, we believe every student has the potential to excel. Our mission is to provide personalized, high-quality education that helps students achieve their academic goals and build confidence in their abilities.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h4>500+</h4>
+                            <p>Students Taught</p>
+                        </div>
+                        <div class="stat">
+                            <h4>95%</h4>
+                            <p>Success Rate</p>
+                        </div>
+                        <div class="stat">
+                            <h4>10+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-graphic">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Owner Section -->
+  <section id="owner" class="owner-section">
+    <img src="dilipsir.png" alt="Dilip Sir - Owner & Maths Teacher">
+    <h2> Prof. Dilip U. Pal</h2>
+    <h4>Mentor & Mathematics Teacher</h4>
+    <p>
+      With over 17+ of teaching experience and a deep love for mathematics, Dilip Sir has empowered hundreds of students to conquer their fears of numbers and succeed academically. He believes in simplifying complex concepts and providing personal mentorship to every student.
+    </p>
+  </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Courses</h2>
+                <p>Comprehensive tuition programs for all academic levels</p>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Mathematics</h3>
+                    <p>From basic arithmetic to advanced calculus. Build strong mathematical foundations.</p>
+                    <ul>
+                        <li>Algebra & Geometry</li>
+                        <li>Trigonometry</li>
+                        <li>Calculus</li>
+                        <li>Statistics</li>
+                    </ul>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Science</h3>
+                    <p>Physics, Chemistry, and Biology courses for comprehensive science education.</p>
+                    <ul>
+                        <li>Physics</li>
+                        <li>Chemistry</li>
+                        <li>Biology</li>
+                        <li>Environmental Science</li>
+                    </ul>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Languages</h3>
+                    <p>English and regional language courses to improve communication skills.</p>
+                    <ul>
+                        <li>English Grammar</li>
+                        <li>Literature</li>
+                        <li>Writing Skills</li>
+                        <li>Speaking & Listening</li>
+                    </ul>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Computer Science</h3>
+                    <p>Programming and computer science fundamentals for the digital age.</p>
+                    <ul>
+                        <li>Programming Basics</li>
+                        <li>Data Structures</li>
+                        <li>Web Development</li>
+                        <li>Database Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Lakshya?</h2>
+                <p>Discover what makes us the preferred choice for private tuitions</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Expert Tutors</h3>
+                    <p>Qualified and experienced teachers with proven track records in their subjects.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Small Class Sizes</h3>
+                    <p>Limited students per batch to ensure personalized attention and better learning outcomes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Flexible Timings</h3>
+                    <p>Choose from morning, afternoon, or evening batches that fit your schedule.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Progress Tracking</h3>
+                    <p>Regular assessments and progress reports to monitor student improvement.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Home Tuitions</h3>
+                    <p>Available for home tuitions for personalized one-on-one learning experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Affordable Fees</h3>
+                    <p>Quality education at competitive prices with flexible payment options.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================== TESTIMONIALS SECTION ================== -->
+<section id="testimonials" class="testimonials-section">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2>What Our Students & Parents Say</h2>
+      <p>See how Lakshya Private Tuitions has made a difference!</p>
+    </div>
+    <!-- Testimonials Grid: six testimonial cards in a responsive grid -->
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <!-- Avatar image for the person giving the testimonial -->
+        <img src="person1.jpg" alt="Virav Shah" class="testimonial-avatar"/>
+        <h4>Virav Shah</h4>
+        <p class="testimonial-role">Got a seat in IIT</p>
+        <p>
+          "Dilip Sir helped me understand Maths like never before. My grades went from average to outstanding!"
+        </p>
+      </div>
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <img src="harsh.png" alt="Harsh Purohit" class="testimonial-avatar"/>
+        <h4>Harsh Purohit</h4>
+        <p class="testimonial-role">Parent</p>
+        <p>
+          "We saw incredible improvement in our son's confidence and marks. Highly recommended for personal attention."
+        </p>
+      </div>
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <img src="shashi.png" alt="Shashi Chouhan" class="testimonial-avatar"/>
+        <h4>Shashi Chouhan</h4>
+        <p class="testimonial-role">Student (Class 10)</p>
+        <p>
+          "All the concepts are taught patiently and doubts are cleared immediately. Thank you for your dedication!"
+        </p>
+      </div>
+      <!-- Testimonial 4 -->
+      <div class="testimonial-card">
+        <img src="janvi.png" alt="Mr. Naik" class="testimonial-avatar"/>
+        <h4>Janhvi Singh</h4>
+        <p class="testimonial-role">Parent</p>
+        <p>
+          "Discipline and personalized care make Lakshya Tuitions stand out. Our daughter loves studying here!"
+        </p>
+      </div>
+      <!-- Testimonial 5 -->
+      <div class="testimonial-card">
+        <img src="person5.jpg" alt="Priya Verma" class="testimonial-avatar"/>
+        <h4>Priya Verma</h4>
+        <p class="testimonial-role">Student (Class 11)</p>
+        <p>
+          "The small batch size means my doubts are never ignored. The learning atmosphere is very encouraging."
+        </p>
+      </div>
+      <!-- Testimonial 6 -->
+      <div class="testimonial-card">
+        <img src="person6.jpg" alt="Ms. Kulkarni" class="testimonial-avatar"/>
+        <h4>Ms. Kulkarni</h4>
+        <p class="testimonial-role">Parent</p>
+        <p>
+          "Dilip Sir has a talent for simplifying tough topics. My son now looks forward to his Maths lessons."
+        </p>
+      </div>
+        <!-- Testimonial 7 -->
+      <div class="testimonial-card">
+        <img src="person6.jpg" alt="Ms. Kulkarni" class="testimonial-avatar"/>
+        <h4>Ms. Kulkarni</h4>
+        <p class="testimonial-role">Parent</p>
+        <p>
+          "Dilip Sir has a talent for simplifying tough topics. My son now looks forward to his Maths lessons."
+        </p>
+      </div>
+        <!-- Testimonial 8 -->
+      <div class="testimonial-card">
+        <img src="person6.jpg" alt="Ms. Kulkarni" class="testimonial-avatar"/>
+        <h4>Ms. Kulkarni</h4>
+        <p class="testimonial-role">Parent</p>
+        <p>
+          "Dilip Sir has a talent for simplifying tough topics. My son now looks forward to his Maths lessons."
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================== END TESTIMONIALS SECTION ================== -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to start your learning journey? Contact us today!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@lakshyatuitions.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>123 Education Street, Academic City, State 123456</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Hours</h4>
+                            <p>Mon-Sat: 9:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <select id="course" name="course">
+                                <option value="">Select a Course</option>
+                                <option value="mathematics">Mathematics</option>
+                                <option value="science">Science</option>
+                                <option value="languages">Languages</option>
+                                <option value="computer-science">Computer Science</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lakshya Private Tuitions</h3>
+                    <p>Excellence in education through personalized learning and dedicated teaching.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Courses</h4>
+                    <ul>
+                        <li><a href="#">Mathematics</a></li>
+                        <li><a href="#">Science</a></li>
+                        <li><a href="#">Languages</a></li>
+                        <li><a href="#">Computer Science</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@lakshyatuitions.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Academic City, State</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lakshya Private Tuitions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = {};
+            
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // Simple validation
+            if (!data.name || !data.email) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Show success message
+            alert('Thank you for your message! We will get back to you soon.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.background = '#fff';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.course-card, .feature-card, .about-content, .contact-content').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Button hover effects
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
