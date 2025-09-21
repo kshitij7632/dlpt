@@ -28,28 +28,32 @@
 
         /* Navigation */
         .navbar {
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.85);
+            box-shadow: 0 4px 24px rgba(74,144,226,0.10), 0 1.5px 6px rgba(0,0,0,0.07);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
+            backdrop-filter: blur(12px);
+            border-bottom: 2px solid #e3edfb;
         }
 
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 80px;
+            height: 88px;
         }
 
         .nav-logo h2 {
-            color: #4a90e2;
-            font-size: 1.8rem;
-            font-weight: 700;
+            color: #357abd;
+            font-size: 2.1rem;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            text-shadow: 0 2px 8px rgba(74,144,226,0.08);
         }
 
         .nav-logo span {
@@ -67,13 +71,18 @@
 
         .nav-link {
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
+            color: #357abd;
+            font-weight: 600;
+            font-size: 1.08rem;
+            letter-spacing: 0.01em;
+            padding: 8px 18px;
+            border-radius: 22px;
+            transition: background 0.2s, color 0.2s;
         }
 
         .nav-link:hover {
-            color: #4a90e2;
+            color: #fff;
+            background: linear-gradient(90deg, #4a90e2 0%, #357abd 100%);
         }
 
         .hamburger {
@@ -92,12 +101,13 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-            color: white;
-            padding: 120px 0 80px;
+            background: linear-gradient(120deg, #e3edfb 0%, #f8f9fa 100%);
+            color: #222;
+            padding: 140px 0 90px;
             min-height: 100vh;
             display: flex;
             align-items: center;
+            box-shadow: 0 8px 32px rgba(74,144,226,0.10);
         }
 
         .hero-container {
@@ -111,58 +121,72 @@
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            line-height: 1.13;
+            letter-spacing: 0.01em;
+            color: #357abd;
+            text-shadow: 0 2px 8px rgba(74,144,226,0.07);
         }
 
         .highlight {
-            color: #ffd700;
+            color: #4a90e2;
         }
 
         .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            font-size: 1.18rem;
+            margin-bottom: 2.2rem;
+            opacity: 0.97;
+            color: #2d3a4a;
+            text-shadow: none;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 1.2rem;
+            margin-top: 0.5rem;
         }
 
         .btn {
-            padding: 12px 30px;
+            padding: 14px 36px;
             border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
+            border-radius: 32px;
+            font-size: 1.08rem;
+            font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.22s;
             text-decoration: none;
             display: inline-block;
+            box-shadow: 0 2px 8px rgba(74,144,226,0.08);
         }
 
         .btn-primary {
-            background: #ffd700;
-            color: #333;
+            background: linear-gradient(90deg, #4a90e2 0%, #357abd 100%);
+            color: #fff;
+            border: 2px solid #4a90e2;
+            box-shadow: 0 2px 8px rgba(74,144,226,0.10);
         }
 
         .btn-primary:hover {
-            background: #ffed4a;
-            transform: translateY(-2px);
+            background: #357abd;
+            color: #fff;
+            transform: translateY(-3px) scale(1.04);
+            border-color: #357abd;
         }
 
         .btn-secondary {
             background: transparent;
-            color: white;
-            border: 2px solid white;
+            color: #fff;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(255,255,255,0.08);
         }
 
         .btn-secondary:hover {
-            background: white;
+            background: #fff;
             color: #4a90e2;
+            border-color: #fff;
+            transform: translateY(-3px) scale(1.04);
         }
 
         .hero-graphic {
@@ -193,8 +217,8 @@
 
         /* About Section */
         .about {
-            padding: 80px 0;
-            background: #f8f9fa;
+            padding: 90px 0;
+            background: linear-gradient(120deg, #f8f9fa 60%, #e3edfb 100%);
         }
 
         .about-content {
@@ -202,25 +226,32 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 6px 32px rgba(74,144,226,0.10);
+            padding: 48px 36px;
+            margin-top: 2.5rem;
         }
 
         .about-text h3 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #333;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.1rem;
+            color: #357abd;
         }
 
         .about-text p {
-            font-size: 1.1rem;
-            color: #666;
+            font-size: 1.15rem;
+            color: #2d3a4a;
             margin-bottom: 2rem;
+            line-height: 1.7;
         }
 
         .stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
+            margin-top: 2.2rem;
         }
 
         .stat {
@@ -228,85 +259,120 @@
         }
 
         .stat h4 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #4a90e2;
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: #357abd;
             margin-bottom: 0.5rem;
         }
 
         .stat p {
-            color: #666;
-            font-weight: 500;
+            color: #2d3a4a;
+            font-weight: 600;
         }
 
         .about-graphic {
             text-align: center;
-            font-size: 8rem;
+            font-size: 7rem;
             color: #4a90e2;
-            opacity: 0.1;
+            opacity: 0.13;
+            margin-top: 1.5rem;
         }
 
            /* Founder Section */
     .owner-section {
-      background: #f9f9f9; padding: 60px 20px; text-align: center;
+    background: linear-gradient(120deg, #e3edfb 0%, #f8f9fa 100%);
+    padding: 70px 0 60px 0; text-align: center;
     }
     .owner-section img {
-      width: auto; border-radius: 20%; margin-bottom: 15px; height: 400px; 
+    width: auto; border-radius: 24px; margin-bottom: 18px; height: 320px; box-shadow: 0 4px 24px rgba(74,144,226,0.10);
     }
     .owner-section h2 {color: #4a90e2;}
+    .owner-section h2 {
+        color: #357abd;
+        font-size: 2.1rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+    }
     .owner-section p {max-width: 700px; margin: auto; color: #555;}
+    .owner-section h4 {
+        color: #2d3a4a;
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin-bottom: 1.1rem;
+    }
+    .owner-section p {
+        max-width: 700px;
+        margin: auto;
+        color: #2d3a4a;
+        font-size: 1.13rem;
+        line-height: 1.7;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 2px 12px rgba(74,144,226,0.07);
+        padding: 24px 18px;
+        margin-top: 1.5rem;
+    }
 
 
         /* Courses Section */
         .courses {
-            padding: 80px 0;
+            padding: 90px 0;
+            background: linear-gradient(120deg, #f8f9fa 60%, #e3edfb 100%);
         }
 
         .courses-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.2rem;
         }
 
         .course-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s;
+            background: linear-gradient(135deg, #f0f7ff 0%, #e3edfb 100%);
+            padding: 2.4rem 2rem 2.2rem 2rem;
+            border-radius: 22px;
+            box-shadow: 0 6px 24px rgba(74,144,226,0.10);
+            text-align: left;
+            transition: transform 0.22s, box-shadow 0.22s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .course-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 32px rgba(74,144,226,0.18), 0 2px 8px rgba(0,0,0,0.10);
         }
         .course-icon {
-            font-size: 3rem;
-            color: #4a90e2;
-            margin-bottom: 1rem;
+            font-size: 2.6rem;
+            color: #357abd;
+            margin-bottom: 1.1rem;
         }
 
         .course-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #333;
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+            color: #357abd;
         }
 
         .course-card p {
-            color: #666;
-            margin-bottom: 1.5rem;
+            color: #2d3a4a;
+            margin-bottom: 1.1rem;
+            font-size: 1.08rem;
+            line-height: 1.6;
         }
 
         .course-card ul {
             list-style: none;
             text-align: left;
+            margin-bottom: 0.5rem;
         }
 
         .course-card ul li {
-            padding: 0.5rem 0;
-            color: #666;
-            border-bottom: 1px solid #eee;
+            padding: 0.45rem 0;
+            color: #357abd;
+            border-bottom: 1px solid #e3edfb;
+            font-size: 1.01rem;
         }
 
         .course-card ul li:before {
@@ -318,95 +384,90 @@
 
         /* Features Section */
         .features {
-            padding: 80px 0;
-            background: #f8f9fa;
+            padding: 90px 0;
+            background: linear-gradient(120deg, #e3edfb 0%, #f8f9fa 100%);
         }
 
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 2.2rem;
         }
 
         .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            background: linear-gradient(135deg, #f0f7ff 0%, #e3edfb 100%);
+            padding: 2.2rem 1.7rem 2rem 1.7rem;
+            border-radius: 22px;
+            text-align: left;
+            box-shadow: 0 6px 24px rgba(74,144,226,0.10);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: transform 0.22s, box-shadow 0.22s;
         }
 
         .feature-icon {
-            font-size: 3rem;
-            color: #4a90e2;
-            margin-bottom: 1rem;
+            font-size: 2.4rem;
+            color: #357abd;
+            margin-bottom: 1.1rem;
         }
 
         .feature-card h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #333;
+            font-size: 1.18rem;
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+            color: #357abd;
         }
 
         .feature-card p {
-            color: #666;
-            line-height: 1.6;
+            color: #2d3a4a;
+            line-height: 1.6;   
+            font-size: 1.05rem;
         }
 
         /* ================== TESTIMONIALS SECTION STYLES ================== */
 
-/* Overall background and spacing for the testimonials area */
+/* Testimonials Section */
 .testimonials-section {
-  background: #f8f9fa;
-  padding: 60px 0;
+    background: linear-gradient(120deg, #e3edfb 0%, #f8f9fa 100%);
+    padding: 80px 0 70px 0;
 }
-
-/* Container for testimonial cards in a responsive grid layout */
 .testimonials-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin-top: 40px;
+    display: grid;
+    gap: 2.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    margin-top: 40px;
 }
-
-/* Each testimonial card */
 .testimonial-card {
-  background: #fff;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.1); /* Soft shadow effect */
-  border-radius: 12px;
-  padding: 24px 18px 18px 18px;
-  text-align: center;
-  transition: transform 0.2s;
+    background: linear-gradient(135deg, #f0f7ff 0%, #e3edfb 100%);
+    box-shadow: 0 8px 32px rgba(74,144,226,0.10);
+    border-radius: 22px;
+    border-top: 5px solid #4a90e2;
+    padding: 36px 28px 30px 28px;
+    text-align: left;
+    transition: transform 0.22s, box-shadow 0.22s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
 }
-
-/* Zoom effect on hover for better interactivity */
 .testimonial-card:hover {
-  transform: translateY(-6px) scale(1.03);
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 16px 40px rgba(74,144,226,0.18), 0 2px 8px rgba(0,0,0,0.10);
 }
-
-/* Avatar (profile) image styling: circular, sized, with accent border */
-.testimonial-avatar {
-  width: 200px;
-  height: 220px;
-  border-radius: 15%;
-  object-fit: cover;
-  margin-bottom: 14px;
-  border: 3px solid #4a90e2; /* Accent color border */
-  background: #e3edfb;
-}
-
-/* Style for the person's role (student/parent/class) */
 .testimonial-role {
-  color: #4a90e2;
-  font-size: 0.96rem;
-  margin-bottom: 0.8em;
+    color: #357abd;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.7em;
+    letter-spacing: 0.02em;
 }
-
-/* Set the testimonial text color and spacing */
 .testimonial-card p {
-  color: #555;
-  font-size: 1.07rem;
+    color: #2d3a4a;
+    font-size: 1.09rem;
+    line-height: 1.7;
+    margin-bottom: 0;
 }
 
 /* ================== END TESTIMONIALS SECTION STYLES ================== */
@@ -414,49 +475,87 @@
 
         /* Contact Section */
         .contact {
-            padding: 80px 0;
+            padding: 90px 0;
+            background: linear-gradient(120deg, #f8f9fa 60%, #e3edfb 100%);
         }
 
         .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            background: linear-gradient(135deg, #f0f7ff 0%, #e3edfb 100%);
+            border-radius: 28px;
+            box-shadow: 0 8px 32px rgba(74,144,226,0.13);
+            padding: 48px 36px;
+            margin-top: 2.5rem;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            justify-content: flex-start;
+            align-items: stretch;
         }
 
         .contact-item {
             display: flex;
-            align-items: center;
-            margin-bottom: 2rem;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 1.2rem;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 2px 12px rgba(74,144,226,0.07);
+            padding: 18px 20px;
+            width: 100%;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .contact-item:hover {
+            box-shadow: 0 8px 32px rgba(74,144,226,0.16);
+            transform: translateY(-3px) scale(1.03);
         }
 
         .contact-icon {
-            font-size: 1.5rem;
-            color: #4a90e2;
-            margin-right: 1rem;
-            width: 50px;
-            height: 50px;
-            background: #f0f7ff;
+            font-size: 2.1rem;
+            color: #fff;
+            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
             border-radius: 50%;
+            width: 54px;
+            height: 54px;
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 2px 8px rgba(74,144,226,0.13);
+            margin-top: 2px;
+            flex-shrink: 0;
         }
 
         .contact-details h4 {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: #357abd;
+            margin-bottom: 0.3rem;
+            font-size: 1.13rem;
         }
 
         .contact-details p {
-            color: #666;
+            color: #2d3a4a;
+            font-size: 1.07rem;
+            line-height: 1.6;
+            margin-bottom: 0;
         }
 
         .contact-form {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #f0f7ff 0%, #e3edfb 100%);
+            padding: 2.4rem 2rem 2.2rem 2rem;
+            border-radius: 22px;
+            box-shadow: 0 6px 24px rgba(74,144,226,0.10);
+            margin-top: 1.5rem;
         }
 
         .form-group {
@@ -467,18 +566,19 @@
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e1e5e9;
-            border-radius: 8px;
-            font-size: 1rem;
+            padding: 14px 18px;
+            border: 2px solid #e3edfb;
+            border-radius: 12px;
+            font-size: 1.07rem;
             transition: border-color 0.3s;
+            background: #f8f9fa;
         }
 
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #4a90e2;
+            border-color: #357abd;
         }
 
         .form-group textarea {
@@ -488,27 +588,30 @@
 
         /* Footer */
         .footer {
-            background: #333;
-            color: white;
-            padding: 40px 0 20px;
+            background: linear-gradient(120deg, #357abd 0%, #4a90e2 100%);
+            color: #fff;
+            padding: 56px 0 28px 0;
+            box-shadow: 0 -4px 24px rgba(74,144,226,0.10);
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2.2rem;
+            margin-bottom: 2.5rem;
         }
 
         .footer-section h3,
         .footer-section h4 {
             margin-bottom: 1rem;
-            color: #4a90e2;
+            color: #ffd700;
+            font-weight: 700;
         }
 
         .footer-section p {
-            color: #ccc;
+            color: #e3edfb;
             margin-bottom: 1rem;
+            font-size: 1.08rem;
         }
 
         .footer-section ul {
@@ -520,42 +623,46 @@
         }
 
         .footer-section ul li a {
-            color: #ccc;
+            color: #e3edfb;
             text-decoration: none;
             transition: color 0.3s;
+            font-size: 1.05rem;
         }
 
         .footer-section ul li a:hover {
-            color: #4a90e2;
+            color: #ffd700;
         }
 
         .social-links {
             display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
+            gap: 1.3rem;
+            margin-top: 1.2rem;
         }
 
         .social-links a {
-            color: #ccc;
-            font-size: 1.5rem;
+            color: #ffd700;
+            font-size: 2.1rem;
             transition: color 0.3s;
         }
 
         .social-links a:hover {
-            color: #4a90e2;
+            color: #fff;
         }
 
         .footer-bottom {
             text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #555;
-            color: #ccc;
+            padding-top: 2.2rem;
+            border-top: 1.5px solid #e3edfb;
+            color: #e3edfb;
+            font-size: 1.04rem;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
+
             .hamburger {
                 display: flex;
+                z-index: 1100;
             }
 
             .nav-menu {
@@ -564,45 +671,115 @@
                 top: 80px;
                 flex-direction: column;
                 background-color: white;
-                width: 100%;
+                width: 100vw;
                 text-align: center;
-                transition: 0.3s;
+                transition: left 0.3s;
                 box-shadow: 0 10px 27px rgba(0,0,0,0.05);
                 padding: 2rem 0;
+                font-size: 1.2rem;
             }
 
             .nav-menu.active {
                 left: 0;
             }
 
+            .nav-link {
+                padding: 1rem 0;
+                font-size: 1.1rem;
+            }
+
             .hero-container {
                 grid-template-columns: 1fr;
                 text-align: center;
+                gap: 2rem;
+                padding: 0 8px;
             }
 
             .hero-content h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
             }
 
             .about-content {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-graphic {
+                font-size: 4rem;
+            }
+
+            .owner-section img {
+                height: 220px;
+                width: 90vw;
+                max-width: 320px;
+            }
+
+            .courses-grid, .features-grid, .footer-content, .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+
+            .course-card, .feature-card, .testimonial-card {
+                padding: 1.2rem;
             }
 
             .contact-content {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             .stats {
                 grid-template-columns: 1fr;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
+                gap: 1rem;
             }
 
             .section-header h2 {
-                font-size: 2rem;
+                font-size: 1.4rem;
+            }
+
+            .footer {
+                padding: 24px 0 10px;
+            }
+
+            .footer-section h3, .footer-section h4 {
+                font-size: 1.1rem;
+            }
+
+            .footer-section p, .footer-section ul li, .footer-section ul li a {
+                font-size: 0.95rem;
+            }
+
+            .social-links a {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 12px 0;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.3rem;
+            }
+            .hero-content p {
+                font-size: 0.95rem;
+            }
+            .owner-section img {
+                height: 140px;
+                max-width: 90vw;
+            }
+            .about-graphic {
+                font-size: 2.2rem;
+            }
+            .hero-graphic {
+                font-size: 4rem;
             }
         }
 
@@ -709,54 +886,80 @@
             <div class="courses-grid">
                 <div class="course-card">
                     <div class="course-icon">
-                        <i class="fas fa-calculator"></i>
+                        <i class="fas fa-flask"></i>
                     </div>
-                    <h3>Mathematics</h3>
-                    <p>From basic arithmetic to advanced calculus. Build strong mathematical foundations.</p>
+                    <h3>JEE</h3>
+                    <p>Comprehensive coaching for JEE Main & Advanced with expert faculty and regular tests.</p>
                     <ul>
-                        <li>Algebra & Geometry</li>
-                        <li>Trigonometry</li>
-                        <li>Calculus</li>
-                        <li>Statistics</li>
+                        <li>Physics, Chemistry, Mathematics</li>
+                        <li>Conceptual Clarity</li>
+                        <li>Practice Papers & Mock Tests</li>
+                        <li>Doubt Solving Sessions</li>
+                    </ul>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>NEET</h3>
+                    <p>Focused preparation for NEET with in-depth coverage of Biology, Physics & Chemistry.</p>
+                    <ul>
+                        <li>Biology, Physics, Chemistry</li>
+                        <li>NCERT Emphasis</li>
+                        <li>Regular Assessments</li>
+                        <li>Personal Mentoring</li>
+                    </ul>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>CET</h3>
+                    <p>Expert guidance for MHT-CET and other state-level entrance exams.</p>
+                    <ul>
+                        <li>Physics, Chemistry, Maths/Biology</li>
+                        <li>Shortcuts & Tricks</li>
+                        <li>Topic-wise Tests</li>
+                        <li>Result Analysis</li>
                     </ul>
                 </div>
                 <div class="course-card">
                     <div class="course-icon">
                         <i class="fas fa-atom"></i>
                     </div>
-                    <h3>Science</h3>
-                    <p>Physics, Chemistry, and Biology courses for comprehensive science education.</p>
+                    <h3>XI - XII Science</h3>
+                    <p>Board-focused Science coaching for XI & XII with practical and theory support.</p>
                     <ul>
-                        <li>Physics</li>
-                        <li>Chemistry</li>
-                        <li>Biology</li>
-                        <li>Environmental Science</li>
+                        <li>Physics, Chemistry, Maths, Biology</li>
+                        <li>Board Exam Preparation</li>
+                        <li>Notes & Assignments</li>
+                        <li>Weekly Doubt Sessions</li>
                     </ul>
                 </div>
                 <div class="course-card">
                     <div class="course-icon">
-                        <i class="fas fa-language"></i>
+                        <i class="fas fa-briefcase"></i>
                     </div>
-                    <h3>Languages</h3>
-                    <p>English and regional language courses to improve communication skills.</p>
+                    <h3>XI - XII Commerce<br><span style='font-size:0.9em;'>(Dombivli Branch)</span></h3>
+                    <p>Commerce stream coaching with focus on Accounts, Economics, and Business Studies.</p>
                     <ul>
-                        <li>English Grammar</li>
-                        <li>Literature</li>
-                        <li>Writing Skills</li>
-                        <li>Speaking & Listening</li>
+                        <li>Accounts, Economics, O.C., S.P.</li>
+                        <li>Board Exam Preparation</li>
+                        <li>Conceptual Clarity</li>
+                        <li>Personal Attention</li>
                     </ul>
                 </div>
                 <div class="course-card">
                     <div class="course-icon">
-                        <i class="fas fa-laptop-code"></i>
+                        <i class="fas fa-users"></i>
                     </div>
-                    <h3>Computer Science</h3>
-                    <p>Programming and computer science fundamentals for the digital age.</p>
+                    <h3>8th 9th 10th<br><span style='font-size:0.9em;'>(Dombivli Branch)</span></h3>
+                    <p>Strong foundation for school students of classes 8th, 9th, and 10th in all major subjects.</p>
                     <ul>
-                        <li>Programming Basics</li>
-                        <li>Data Structures</li>
-                        <li>Web Development</li>
-                        <li>Database Management</li>
+                        <li>Maths, Science, English, Social Studies</li>
+                        <li>School Exam Preparation</li>
+                        <li>Concept Building</li>
+                        <li>Regular Tests</li>
                     </ul>
                 </div>
             </div>
@@ -826,81 +1029,42 @@
     </div>
     <!-- Testimonials Grid: six testimonial cards in a responsive grid -->
     <div class="testimonials-grid">
-      <!-- Testimonial 1 -->
-      <div class="testimonial-card">
-        <!-- Avatar image for the person giving the testimonial -->
-        <img src="person1.jpg" alt="Virav Shah" class="testimonial-avatar"/>
-        <h4>Virav Shah</h4>
-        <p class="testimonial-role">Got a seat in IIT</p>
-        <p>
-          "Dilip Sir helped me understand Maths like never before. My grades went from average to outstanding!"
-        </p>
-      </div>
-      <!-- Testimonial 2 -->
-      <div class="testimonial-card">
-        <img src="harsh.png" alt="Harsh Purohit" class="testimonial-avatar"/>
-        <h4>Harsh Purohit</h4>
-        <p class="testimonial-role">Parent</p>
-        <p>
-          "We saw incredible improvement in our son's confidence and marks. Highly recommended for personal attention."
-        </p>
-      </div>
-      <!-- Testimonial 3 -->
-      <div class="testimonial-card">
-        <img src="shashi.png" alt="Shashi Chouhan" class="testimonial-avatar"/>
-        <h4>Shashi Chouhan</h4>
-        <p class="testimonial-role">Student (Class 10)</p>
-        <p>
-          "All the concepts are taught patiently and doubts are cleared immediately. Thank you for your dedication!"
-        </p>
-      </div>
-      <!-- Testimonial 4 -->
-      <div class="testimonial-card">
-        <img src="janvi.png" alt="Mr. Naik" class="testimonial-avatar"/>
-        <h4>Janhvi Singh</h4>
-        <p class="testimonial-role">Parent</p>
-        <p>
-          "Discipline and personalized care make Lakshya Tuitions stand out. Our daughter loves studying here!"
-        </p>
-      </div>
-      <!-- Testimonial 5 -->
-      <div class="testimonial-card">
-        <img src="person5.jpg" alt="Priya Verma" class="testimonial-avatar"/>
-        <h4>Priya Verma</h4>
-        <p class="testimonial-role">Student (Class 11)</p>
-        <p>
-          "The small batch size means my doubts are never ignored. The learning atmosphere is very encouraging."
-        </p>
-      </div>
-      <!-- Testimonial 6 -->
-      <div class="testimonial-card">
-        <img src="person6.jpg" alt="Ms. Kulkarni" class="testimonial-avatar"/>
-        <h4>Ms. Kulkarni</h4>
-        <p class="testimonial-role">Parent</p>
-        <p>
-          "Dilip Sir has a talent for simplifying tough topics. My son now looks forward to his Maths lessons."
-        </p>
-      </div>
-        <!-- Testimonial 7 -->
-      <div class="testimonial-card">
-        <img src="person6.jpg" alt="Ms. Kulkarni" class="testimonial-avatar"/>
-        <h4>Ms. Kulkarni</h4>
-        <p class="testimonial-role">Parent</p>
-        <p>
-          "Dilip Sir has a talent for simplifying tough topics. My son now looks forward to his Maths lessons."
-        </p>
-      </div>
-        <!-- Testimonial 8 -->
-      <div class="testimonial-card">
-        <img src="person6.jpg" alt="Ms. Kulkarni" class="testimonial-avatar"/>
-        <h4>Ms. Kulkarni</h4>
-        <p class="testimonial-role">Parent</p>
-        <p>
-          "Dilip Sir has a talent for simplifying tough topics. My son now looks forward to his Maths lessons."
-        </p>
-      </div>
-    </div>
-  </div>
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <h4>Virav Shah</h4>
+                        <p class="testimonial-role">IIT Student</p>
+                        <p>"DLPT's guidance and support helped me crack JEE and secure a seat in IIT. The teachers always encouraged me, cleared my doubts, and the regular mock tests kept me motivated and focused."</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <h4>Harsh Purohit</h4>
+                        <p class="testimonial-role">Yale University Admit</p>
+                        <p>"The foundation I got at DLPT was crucial for my academic journey. The teachers motivated me to aim higher, supported me, and the study material was comprehensive. I am grateful for the mentorship and confidence."</p>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <h4>Shashi Chouhan</h4>
+                        <p class="testimonial-role">Government Medical College Student</p>
+                        <p>"Thanks to DLPT, I cleared NEET and got into a top government medical college. The focus on concepts, regular tests, and approachable teachers made a huge difference. I recommend DLPT to all medical aspirants."</p>
+                    </div>
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <h4>Janhvi Singh</h4>
+                        <p class="testimonial-role">CET Topper</p>
+                        <p>"Lakshya's focused CET coaching and practice tests helped me top the exam. The teachers always cleared my doubts, the environment was motivating, and regular assessments kept me on track for success."</p>
+                    </div>
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card">
+                        <h4>Kshitij Yevate</h4>
+                        <p class="testimonial-role">Engineering Student</p>
+                        <p>"DLPT helped me build a strong foundation and get into a good engineering college. The teaching style is interactive, student-friendly, and the extra practice sessions were a big plus for my success."</p>
+                    </div>
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-card">
+                        <h4>Mrinali Panigrahi</h4>
+                        <p class="testimonial-role">Biotechnology Student</p>
+                        <p>"The support and encouragement from Lakshya gave me the confidence to pursue my passion in biotechnology. The teachers are truly dedicated to student success."</p>
+                    </div>
 </section>
 <!-- ================== END TESTIMONIALS SECTION ================== -->
 
@@ -915,34 +1079,35 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon">
+                            <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
                         <div class="contact-details">
                             <h4>Phone</h4>
-                            <p>+91 98765 43210</p>
+                            <p>Mulund Branch: <a href="tel:9167788777" style="color:#357abd;text-decoration:none;">91677 88777</a><br>Dombivli Branch: <a href="tel:9321677629" style="color:#357abd;text-decoration:none;">9321677629</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">
+                            <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="contact-details">
                             <h4>Email</h4>
-                            <p>info@lakshyatuitions.com</p>
+                            <p><a href="mailto:lakshyaprivatetuition@gmail.com" style="color:#357abd;text-decoration:none;">lakshyaprivatetuition@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">
+                            <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="contact-details">
                             <h4>Address</h4>
-                            <p>123 Education Street, Academic City, State 123456</p>
+                            <p><b>Mulund Branch:</b><br>Floor 2, Keshav Bhavan, MG Road, beside Mensa Classes, near Shiv Sena Shakha, Mulund West, Mumbai, Maharashtra 400080</p>
+                            <p><b>Dombivli Branch:</b><br>310, Lakshya Private Tuition, Navare Plaza, Police Station, opposite to Ram Nagar, Ramnagar, Dombivli East, Dombivli, Maharashtra 421301</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">
+                            <div class="contact-icon">
                             <i class="fas fa-clock"></i>
                         </div>
                         <div class="contact-details">
@@ -950,32 +1115,6 @@
                             <p>Mon-Sat: 9:00 AM - 8:00 PM</p>
                         </div>
                     </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Your Phone">
-                        </div>
-                        <div class="form-group">
-                            <select id="course" name="course">
-                                <option value="">Select a Course</option>
-                                <option value="mathematics">Mathematics</option>
-                                <option value="science">Science</option>
-                                <option value="languages">Languages</option>
-                                <option value="computer-science">Computer Science</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -1015,9 +1154,11 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contact Info</h4>
-                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-                    <p><i class="fas fa-envelope"></i> info@lakshyatuitions.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Academic City, State</p>
+                    <p><i class="fas fa-phone"></i> Mulund: <a href="tel:9167788777" style="color:#ffd700;text-decoration:none;">91677 88777</a></p>
+                    <p><i class="fas fa-phone"></i> Dombivli: <a href="tel:9321677629" style="color:#ffd700;text-decoration:none;">9321677629</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:lakshyaprivatetuition@gmail.com" style="color:#ffd700;text-decoration:none;">lakshyaprivatetuition@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> <b>Mulund Branch:</b> Floor 2, Keshav Bhavan, MG Road, beside Mensa Classes, near Shiv Sena Shakha, Mulund West, Mumbai, Maharashtra 400080</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <b>Dombivli Branch:</b> 310, Lakshya Private Tuition, Navare Plaza, Police Station, opposite to Ram Nagar, Ramnagar, Dombivli East, Dombivli, Maharashtra 421301</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -1136,3 +1277,4 @@
     </script>
 </body>
 </html>
+
