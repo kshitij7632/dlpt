@@ -1091,6 +1091,96 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Updated Owner Section Styles */
+        .owner-section {
+            background: linear-gradient(120deg, #e3edfb 0%, #f8f9fa 100%);
+            padding: 70px 20px 60px;
+            text-align: center;
+        }
+        .owner-section .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .owner-section .image-container {
+            width: 100%;
+            max-width: 360px;
+            margin: 0 auto 24px;
+            position: relative;
+            aspect-ratio: 3/4;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(74,144,226,0.15);
+        }
+        .owner-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .owner-section h2 {
+            color: #357abd;
+            font-size: 2.1rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .owner-section h4 {
+            color: #2d3a4a;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 1.1rem;
+        }
+        .owner-section p {
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+            color: #2d3a4a;
+            font-size: 1.13rem;
+            line-height: 1.7;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 2px 12px rgba(74,144,226,0.07);
+            padding: 24px 18px;
+        }
+
+        @media (max-width: 768px) {
+            .owner-section {
+                padding: 50px 16px;
+            }
+            .owner-section .image-container {
+                max-width: 280px;
+            }
+            .owner-section h2 {
+                font-size: 1.6rem;
+            }
+            .owner-section h4 {
+                font-size: 1.1rem;
+            }
+            .owner-section p {
+                font-size: 1rem;
+                padding: 20px 16px;
+                margin: 1.5rem 8px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .owner-section {
+                padding: 40px 12px;
+            }
+            .owner-section .image-container {
+                max-width: 240px;
+            }
+            .owner-section h2 {
+                font-size: 1.4rem;
+            }
+            .owner-section h4 {
+                font-size: 1rem;
+            }
+            .owner-section p {
+                font-size: 0.95rem;
+                padding: 16px 12px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1172,12 +1262,16 @@
 
      <!-- Owner Section -->
   <section id="owner" class="owner-section">
-    <img src="dilipsir.png" alt="Dilip Sir - Owner & Maths Teacher">
-    <h2> Prof. Dilip U. Pal</h2>
-    <h4>Mentor & Mathematics Teacher</h4>
-    <p>
-      With over 17+ of teaching experience and a deep love for mathematics, Dilip Sir has empowered hundreds of students to conquer their fears of numbers and succeed academically. He believes in simplifying complex concepts and providing personal mentorship to every student.
-    </p>
+    <div class="container">
+      <div class="image-container">
+        <img src="dilipsir.png" alt="Dilip Sir - Owner & Maths Teacher">
+      </div>
+      <h2>Prof. Dilip U. Pal</h2>
+      <h4>Mentor & Mathematics Teacher</h4>
+      <p>
+        With over 17+ of teaching experience and a deep love for mathematics, Dilip Sir has empowered hundreds of students to conquer their fears of numbers and succeed academically. He believes in simplifying complex concepts and providing personal mentorship to every student.
+      </p>
+    </div>
   </section>
 
     <!-- Courses Section -->
