@@ -1796,10 +1796,35 @@
                 grid-template-columns: 1fr;
             }
             
-            .contact-info,
-            .contact-form {
-                padding: 35px;
-            }
+             /* CONTACT SECTION FIX */
+    .contact-info,
+    .contact-form {
+        padding: 30px 20px;        /* Reduced padding */
+    }
+    
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 2rem;           /* Smaller heading */
+        margin-bottom: 25px;
+    }
+    
+    .contact-item {
+        padding: 18px;             /* Reduced padding */
+        margin-bottom: 20px;
+    }
+    
+    .contact-item ion-icon {
+        font-size: 2rem;           /* Smaller icons */
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-control {
+        padding: 14px 16px;        /* Slightly smaller inputs */
+        font-size: 0.95rem;
+    }
             
             .logo img {
                 height: 70px;
@@ -1846,11 +1871,63 @@
                 padding: 40px 30px;
             }
             
-            .contact-info,
-            .contact-form {
-                padding: 30px 20px;
-            }
-            
+             /* CONTACT SECTION MOBILE FIX */
+    .contact-info,
+    .contact-form {
+        padding: 25px 16px;        /* Even smaller padding for mobile */
+        border-radius: var(--radius-md);  /* Smaller border radius */
+    }
+    
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 1.6rem;         /* Smaller heading on mobile */
+        margin-bottom: 20px;
+    }
+    
+    .contact-item {
+        padding: 14px;             /* Compact padding */
+        margin-bottom: 16px;
+        flex-direction: column;    /* Stack icon and text vertically */
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .contact-item ion-icon {
+        font-size: 1.8rem;         /* Smaller icons */
+    }
+    
+    .contact-item-text h4 {
+        font-size: 1rem;
+    }
+    
+    .contact-item-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .form-group {
+        margin-bottom: 18px;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+    
+    .form-control {
+        padding: 12px 14px;        /* Compact input fields */
+        font-size: 0.9rem;
+        border-radius: var(--radius-sm);
+    }
+    
+    textarea.form-control {
+        min-height: 100px;         /* Smaller textarea on mobile */
+    }
+    
+    .btn {
+        padding: 14px 28px;        /* Smaller button */
+        font-size: 0.95rem;
+    }
             .stat-item {
                 padding: 30px 20px;
             }
@@ -1866,6 +1943,32 @@
     }
     
         }
+        @media (max-width: 380px) {
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 1.4rem;
+    }
+    
+    .contact-info,
+    .contact-form {
+        padding: 20px 12px;
+    }
+    
+    .contact-item {
+        padding: 12px;
+    }
+    
+    .form-control {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.85rem;
+    }
+}
+
     </style>
 </head>
 
@@ -2878,4 +2981,3 @@
     </script>
 </body>
 </html>
-
