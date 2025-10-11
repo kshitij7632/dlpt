@@ -1769,9 +1769,24 @@
             }
             
             .hero-text h1 {
-                font-size: 2.2rem;
-            }
-            
+        font-size: 2.5rem;              /* Reduced from 3rem */
+        letter-spacing: -1.5px;
+        line-height: 1.2;
+        word-break: keep-all;            /* Prevent awkward breaks */
+    }
+    .hero-text .highlight {
+        display: inline;                 /* Keep words together */
+        white-space: nowrap;             /* Prevent "Education" from breaking */
+    }
+      
+    .hero-text .highlight::after {
+        bottom: -4px;                    /* Adjust underline position */
+        height: 4px;
+    }
+    .hero-badge {
+        font-size: 0.85rem;
+        padding: 8px 20px;
+    }
             .hero-text p {
                 font-size: 1.1rem;
             }
@@ -1842,6 +1857,67 @@
     .udaan-image {
         order: -1;                      /* Show image first on mobile */
     }
+     
+    /* AUTO-SHOW EFFECTS ON MOBILE - NO HOVER NEEDED */
+    
+    /* Course Cards - Always show hover state */
+    .course-card {
+        transform: translateY(-5px);
+        border-color: rgba(255, 215, 0, 0.3);
+    }
+    
+    .course-card::before {
+        opacity: 1;
+    }
+    
+    /* Faculty Cards - Always show effects */
+    .faculty-card {
+        transform: translateY(-5px);
+        border-color: rgba(255, 215, 0, 0.3);
+    }
+    
+    /* Stats Items - Always elevated */
+    .stat-item {
+        transform: translateY(-3px);
+        border-color: rgba(255, 215, 0, 0.2);
+    }
+    
+    .stat-item::before {
+        transform: scaleX(1);
+    }
+    
+    /* Testimonial Cards - Always highlighted */
+    .testimonial-card {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 215, 0, 0.3);
+    }
+    
+    /* About Features - Always visible */
+    .about-feature {
+        transform: translateX(5px);
+    }
+    
+    /* Udaan Highlights - Always shown */
+    .udaan-highlight {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateX(5px);
+    }
+    
+    /* Contact Items - Subtle effect always on */
+    .contact-item {
+        border-left-color: var(--bright-yellow);
+    }
+    
+    /* Remove hover transitions on mobile for instant effects */
+    .course-card,
+    .faculty-card,
+    .stat-item,
+    .testimonial-card,
+    .about-feature,
+    .udaan-highlight,
+    .contact-item {
+        transition: none;
+    }
         }
    
     
@@ -1852,9 +1928,30 @@
             }
             
             .hero-text h1 {
-                font-size: 1.8rem;
-                letter-spacing: -1px;
-            }
+        font-size: 2rem;                 /* Smaller for mobile */
+        letter-spacing: -1px;
+        line-height: 1.25;
+        margin-bottom: 20px;
+        word-spacing: 0.05em;            /* Better word spacing */
+    }
+    .hero-text .highlight {
+        display: inline-block;           /* Keep highlighted words intact */
+        white-space: nowrap;
+    }
+    .hero-text .highlight::after {
+        bottom: -3px;
+        height: 3px;
+    }
+    .hero-text p {
+        font-size: 1rem;                 /* Adjust paragraph size */
+        line-height: 1.6;
+    }
+    
+    .hero-badge {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+        margin-bottom: 20px;
+    }
             
             .section-title {
                 font-size: 1.9rem;
@@ -2978,6 +3075,56 @@
                 card.style.zIndex = '1';
             });
         });
+        // Add this to your existing JavaScript section
+
+// Touch Effects for Mobile
+if ('ontouchstart' in window) {
+    // Course Cards
+    document.querySelectorAll('.course-card').forEach(card => {
+        card.addEventListener('touchstart', function() {
+            this.style.transform = 'translateY(-15px) scale(1.02)';
+            this.style.borderColor = 'var(--bright-yellow)';
+        });
+        
+        card.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.style.transform = '';
+                this.style.borderColor = '';
+            }, 200);
+        });
+    });
+    
+    // Faculty Cards
+    document.querySelectorAll('.faculty-card').forEach(card => {
+        card.addEventListener('touchstart', function() {
+            this.style.transform = 'translateY(-15px) scale(1.03)';
+            this.style.borderColor = 'var(--bright-yellow)';
+        });
+        
+        card.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.style.transform = '';
+                this.style.borderColor = '';
+            }, 200);
+        });
+    });
+    
+    // Stat Items
+    document.querySelectorAll('.stat-item').forEach(item => {
+        item.addEventListener('touchstart', function() {
+            this.style.transform = 'translateY(-10px) scale(1.03)';
+            this.style.borderColor = 'var(--bright-yellow)';
+        });
+        
+        card.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.style.transform = '';
+                this.style.borderColor = '';
+            }, 200);
+        });
+    });
+}
+
     </script>
 </body>
 </html>
